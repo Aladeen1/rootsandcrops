@@ -1,0 +1,18 @@
+.navbar-main-container {
+	position: absolute;
+	background: linear-gradient(90deg, rgba(162, 245, 165, 0.59) 0%, rgba(79, 219, 194, 0.37) 100%);
+	top: 0px;
+    width: 100%;
+    height: 80px;
+}
+
+.inside-navbar {
+	position: relative;
+}
+
+.logo {
+	width: 70px;
+	height: 70px;
+	z-index: 1;
+	padding: 10px 45px;
+}
