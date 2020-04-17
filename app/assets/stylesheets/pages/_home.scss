@@ -55,19 +55,27 @@ body {
 	width:600px;
 }
 
-.button {
+.button-main {
 	background-color: rgba(79, 219, 194, 0.56);
     border-radius: 10px;
     width: 300px;
-    margin: auto;
+    margin: 15px auto;
 
-    p {
+    .button-1 {
     	padding: 20px;
     	text-align: center;
     	font-size: 25px;
     	font-family: $headers-font;
     	color: white;
+    	margin: 0;
     }
+}
+
+.sub1-content-container-1 {
+	height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .content-container-2 {
@@ -112,7 +120,68 @@ body {
 
 
 
+.contenu-modal {
+	padding: 30px;
 
+	p {
+		color: black;
+    	text-align: center;
+    	font-size: 17px;
+    	font-family: $body-font;
+    	font-weight: 700;
+    	margin-bottom: 25px;
+	}
 
+	input[type=text] {
+		background: rgba(79, 219, 194, 0.57);
+    	border-radius: 10px;
+    	padding: 15px;
+    	width: 400px;
+    	border: none;
+    	font-family: $body-font;
+    	font-size: 15px;
+	}
 
+	input[type=text]:focus::placeholder {
+		color: transparent;
+	} 
+
+	::placeholder { 
+ 	 	color: white;
+  		opacity: 1;
+  	}
+}
+
+.formulaire-participation {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    button {
+	    position: absolute;
+	    bottom: -110px;
+	    border: none;
+	    width: 200px;
+	    padding: 13px;
+	    font-family: $body-font;
+	    font-weight: 700;
+	    font-size: 20px;
+	    background-color: rgba(79, 219, 194, 0.56);
+	    border-radius: 10px;
+	    color: white;
+    }
+
+    button:hover {
+    	background-color: linear-gradient(180deg, #F57A57 0%, #F5AE44 24.48%, #FAB4BA 51.04%, #A2F5A5 78.65%, #4FDBC2 100%);
+    	transition: all 1s;
+    }
+}
+
+.bar-separation {
+	width: 450px;
+	height: 3px;
+	background: linear-gradient(90deg, #F57A57 0%, #F5AE44 24.48%, #FAB4BA 51.04%, #A2F5A5 78.65%, #4FDBC2 100%);
+	margin: auto;
+}
 

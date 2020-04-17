@@ -16,11 +16,13 @@
 		<%= image_tag "Tableau des aliments.jpeg", class:"catalog"%>
 		<div>
 			<%= image_tag "Planner picture", class:"planner"%>
-			<div class="button"><p>Start Now</p></div>
+			<div class="button-main" data-target="#StartNow" data-toggle="modal"><p class="button-1">Start Now</p></div>
 		</div>
 	</div>
 </div>
 <div class="content-container-2">
+	<div class="bar-separation"></div>
+	
 	<div class="section">
 		<h2>Fill up the quiz</h2>
 		<p>It’s the first step so we can suggest you pertinent plants choice.</p>
@@ -37,9 +39,36 @@
 		<h2>Order your seed mix</h2>
 		<p>Once you finished the perfect matching mix you can order directly for the website. Happy planting!</p>
 	</div>
-	<div class="button"><p class="button-2">Start Now</p></div>
+	<div class="button-main" data-target="#StartNow" data-toggle="modal">
+		<p class="button-2">Start Now</p>
+	</div>
+
 </div>
 
 
+<div class="modal" id="StartNow" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document" style="max-width: 600px;">
+    <div class="modal-content" style="margin-top:100px;">
+    	<div class="contenu-modal">
+    		<p>
+    			The seed mixer will start working soon and you will be able to create your garden plan as well as order your customized seed mix directly on this website.
+    		</p>
+    		<p>
+    			In the meantime you can show us your interest for our product and get updates on the project by dropping us your email.
+    		</p>
+
+    		<%= form_tag commitments_path, :class => 'formulaire-participation' do %>
+
+    		<div>
+            	<%= text_field_tag :email, params[:email], placeholder: 'mary@example.com' %>
+          	</div>
+
+          	<button type="submit" class="submit-button">Submit</button>
+          <% end %>
+    	</div>
+    	
+    </div>
+  </div>
+</div>
 
 
