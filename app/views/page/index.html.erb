@@ -16,7 +16,7 @@
 		<%= image_tag "Tableau des aliments.jpeg", class:"catalog"%>
 		<div>
 			<%= image_tag "Planner picture", class:"planner"%>
-			<div class="button"><p>Start Now</p></div>
+			<div class="button-main" data-target="#StartNow" data-toggle="modal"><p class="button-1">Start Now</p></div>
 		</div>
 	</div>
 </div>
@@ -37,9 +37,22 @@
 		<h2>Order your seed mix</h2>
 		<p>Once you finished the perfect matching mix you can order directly for the website. Happy planting!</p>
 	</div>
-	<div class="button"><p class="button-2">Start Now</p></div>
+	<div class="button-main" data-target="#StartNow" data-toggle="modal"><p class="button-2">Start Now</p></div>
 </div>
 
 
-
+<div class="modal" id="StartNow" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document" style="max-width: 600px;">
+    <div class="modal-content" style="margin-top:100px;">
+    	<div class="contenu-modal">
+    		<p>
+    			The seed mixer will start working soon and you will be able to create your garden plan as well as order your customized seed mix directly on this website.
+    		</p>
+    		<p>
+    			In the meantime you can show us your interest for our product and get updates on the project by dropping us your email.
+    		</p>
+    	</div>
+    </div>
+  </div>
+</div>
 
