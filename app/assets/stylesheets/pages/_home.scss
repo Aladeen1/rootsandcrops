@@ -2,42 +2,15 @@ body {
 	margin: 0px;
 }
 
-h2 {
-	color: white;
-	font-family: $headers-font;
-	font-weight: 700;
-    font-size: 60px;
-    letter-spacing: 1px;
-    margin: 0px;
-    padding: 20px 0px;
-}
-
-img {
-	position: absolute;
-    width: 1440px;
-    top: 0px;
-    z-index: -1;
-}
-
 .action-button {
 	background-color: rgba(79, 219, 194, 0.56);
     border-radius: 10px;
     width: 300px;
 }
 
-a {
-	style: none;
-}
-
 .home-first-container {
-	height: 900px;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-image: url('/assets/Background.jpeg');
-    background-size: 100%;
-    background-position: center top;
+	height: 850px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(79, 219, 194, 0.25) 100%), #FFFFFF;
 }
 
 .home-box {
@@ -57,6 +30,86 @@ a {
 	    font-weight: 700;
 	}
 }
+
+.catch-phrase {
+	text-align: center;
+    color: black;
+    margin: 30px;
+    font-size: 50px;
+    font-family: $headers-font;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+.content-container-1 {
+	display: flex;
+    justify-content: space-around;
+    margin: 0px 60px;
+}
+
+.catalog {
+	width:350px;
+}
+
+.planner {
+	width:600px;
+}
+
+.button {
+	background-color: rgba(79, 219, 194, 0.56);
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+
+    p {
+    	padding: 20px;
+    	text-align: center;
+    	font-size: 25px;
+    	font-family: $headers-font;
+    	color: white;
+    }
+}
+
+.content-container-2 {
+	height: 700px;
+    background: linear-gradient(180deg, rgba(79, 219, 194, 0.25) 0%, rgba(255, 255, 255, 0) 40%), #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .section {
+    	width: 570px;
+    	margin: auto;
+    }
+
+    h2 {
+    	color: black;
+    	margin: 0;
+    	text-align: center;
+    	font-size: 35px;
+    	font-family: $headers-font;
+    	font-weight: 700;
+    }
+
+    p {
+    	color: black;
+    	margin: 0;
+    	margin-top: 9px;
+    	text-align: center;
+    	font-size: 19px;
+    	font-family: $body-font;
+    }
+
+    .button-2 {
+    	padding: 20px;
+    	text-align: center;
+    	font-size: 25px;
+    	font-family: $headers-font;
+    	color: white;
+    	margin: 0;
+    }
+}
+
 
 
 
