@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  size: MyString
+  area: MyString
+  sunlight: MyString
+  type: 
+
+two:
+  size: MyString
+  area: MyString
+  sunlight: MyString
+  type: 

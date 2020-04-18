@@ -1,5 +1,6 @@
-<div class="home-first-container">
+<!-- <div class="home-first-container"> -->
 	<%= render 'shared/navbar' %>
+	<%= render 'shared/flashes' %>
 	<!-- Ancien code -->
 	<!-- <div class="home-box"> -->
 		<!-- <h2>Apprenez à cultiver!</h2> -->
@@ -10,39 +11,128 @@
 			</div>
 		</a> -->
 	<!-- </div> -->
-	<!-- Nouveau code -->
-	<h2 class="catch-phrase">Your interactive garden planner</br> for permaculture</h2>
-	<div class="content-container-1">
-		<div><%= image_tag "Tableau des aliments.jpeg", class:"catalog"%></div>
-		<div>
-			<%= image_tag "Planner picture", class:"planner"%>
-			<div class="button-main" data-target="#StartNow" data-toggle="modal"><p class="button-1">Start Now</p></div>
-		</div>
+	<!-- Nouveau nouveau code -->
+
+	<div class="content-container-3">
+		<h2 class="catch-phrase">Get the perfect seeds for a</br> revitalizing garden</h2>
+		<div class="bar-separation"></div>
+		<p>We are a seed mix planner and distributer. We help you choose the seeds to get the best associations in your garden. Here is why you should take your seeds with us.</p>
+		<div class="center-img"><%= image_tag "Accueil.png"%></div>
+		<h2 class="catch-phrase" style="margin-top:38px;">How it works</h2>
+		<div class="bar-separation"></div>
 	</div>
-</div>
+
+	<!-- Nouveau code -->
+
+	
+<!-- </div> -->
 <div class="content-container-2">
-	<div class="bar-separation"></div>
 	
 	<div class="section">
 		<h2>Fill up the quiz</h2>
 		<p>It’s the first step so we can suggest you pertinent plants choice.</p>
+		<div class="collapse-div-container">
+			<button type="button" data-toggle="collapse" data-target="#collapseQuiz" aria-expanded="false" aria-controls="collapseQuiz">
+	 			Start the quiz
+	 		</button>
+	 		<!-- Quizz collapse -->
+			<div class="collapse" id="collapseQuiz">
+				<div>
+					<%= form_tag quizs_path, :class => 'formulaire-quiz' do %>
+
+	    			<div class="text-quiz-question">
+	    				<p>How large is the area you want to use for gardening?</p> 
+	            		<%= text_field_tag :size, params[:size], placeholder: 'e.g. 2-3 square meters' %>
+	          		</div>
+
+	          		<div class="box-quiz-question">
+	          			<p>Where will your gardening area be located?</p> 
+	          			<div><%= check_box_tag 'area', 'Garden' %><p>Garden</p></div>
+	          			<div><%= check_box_tag 'area', 'Kitchen' %><p>Kitchen</p></div>
+	          			<div><%= check_box_tag 'area', 'Balcony' %><p>Balcony</p><br></div>
+	          		</div>
+
+	          		<div class="text-quiz-question">
+	    				<p>How many hours of sunlight does the area receive approximately per day?</p> 
+	            		<%= text_field_tag :sunlight, params[:sunlight], placeholder: 'e.g. 5-7 hours' %>
+	          		</div>
+
+	          		<div class="box-quiz-question">
+	          			<p>Please choose between these 3 garden types:</p> 
+	          			<div><%= check_box_tag 'type', 'landscape' %><p>Edible landscape / Decorative vegetable garden</p></div>
+	          			<div><%= check_box_tag 'type', 'Wisdom' %><p>Food with wisdom/ fill your garden with historical species that you rarely find in the supermarket </p></div>
+	          			<div><%= check_box_tag 'type', 'Autonomy' %><p>Maximum return / varieties that always grow & give you a high yield</p><br></div>
+	          		</div>
+
+
+	          		<div class="centerer"><button type="submit" class="submit-button magic-square">Submit</button></div>
+	          		<% end %>
+          		</div>
+			</div>
+		</div>
 	</div>
+
 	<div class="section">
 		<h2>Set your garden size</h2>
 		<p>Fill up the size of your garden or your boxes if you have some.</p>
 	</div>
+
 	<div class="section">
 		<h2>Drag & Drop</h2>
-		<p>Start filling the plan with the plants we suggest on the left. Just need to drag & drop. The interactive planner tell you which plants match and which doesn’t. </p>
+		<p>Start filling the plan with the plants we suggest on the left. Just need to drag & drop. The interactive planner tell you which plants match and which doesn’t.</p>
+		<div class="collapse-div-container">
+			<button type="button" data-toggle="collapse" data-target="#collapseDrag" aria-expanded="false" aria-controls="collapseDrag">
+	 			Check the planner
+	 		</button>
+		</div>
 	</div>
+	<!-- Drag collapse -->
+	<div class="collapse" id="collapseDrag">
+		<div class="content-container-1">
+			<div><%= image_tag "Tableau des aliments.jpeg", class:"catalog"%></div>
+			<div>
+				<%= image_tag "Planner picture", class:"planner"%>
+				<div class="button-main" data-target="#StartNow" data-toggle="modal"><p class="button-1">Start Now</p></div>
+			</div>
+		</div>
+	</div>
+
+
 	<div class="section">
 		<h2>Order your seed mix</h2>
 		<p>Once you finished the perfect matching mix you can order directly from the website. Happy planting!</p>
+		<div class="collapse-div-container">
+			<button type="button" data-toggle="collapse" data-target="#collapseDrag1" aria-expanded="false" aria-controls="collapseDrag1">
+	 			See our product
+	 		</button>
+	 		<div class="collapse" id="collapseDrag1">
+				<div class="collapseProduct">
+					<div class="price-display">
+						<h4>Basic Plan</br><strong>20€</strong></h4>
+						<p>10 seed types customized seed mix</br>Natural fertilizer starter</br></br>3€ extra for each additional seed type included in your plan</p>
+					</div>
+					<div><%= image_tag "Product.jpeg"%></div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="button-main" data-target="#StartNow" data-toggle="modal">
-		<p class="button-2">Start Now</p>
+	
+	<!-- <div class="section">
+		<h2>Order your seed mix</h2>
+		<p>Once you finished the perfect matching mix you can order directly from the website. Happy planting!</p>
+		<div class="collapse-div-container">
+			<button type="button" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="false" aria-controls="collapseProduct">
+	 			Start the quiz
+	 		</button>
+		</div>
 	</div>
+	<div class="collapse" id="collapseProduct">
+		coming
+	</div> -->
 
+	<!-- <div class="button-main" data-target="#StartNow" data-toggle="modal">
+		<p class="button-2">Start Now</p>
+	</div> -->
 </div>
 
 
@@ -70,5 +160,17 @@
     </div>
   </div>
 </div>
+
+
+
+
+<!-- Planner collapse -->
+
+
+
+<!-- Product collapse -->
+
+
+
 
 
