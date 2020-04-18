@@ -1,5 +1,5 @@
 .navbar-main-container {
-	background: linear-gradient(90deg, rgba(162, 245, 165, 0.59) 0%, rgba(79, 219, 194, 0.37) 100%);
+	background: linear-gradient(90deg, rgba(79, 219, 194, 0.57) 0%, rgba(162, 245, 165, 0.59) 100%);
     width: 100%;
     height: 80px;
     position: relative;
@@ -26,4 +26,20 @@
 	margin: 0;
 	text-align: center;
 	padding-top: 6px;
+}
+
+.logos-sociaux {
+	position: absolute;
+	right: 30px;
+	top: 10px;
+
+	.pinterest {
+		width: 50px;
+		height: 50px;
+	}
+
+	.insta {
+		width: 60px;
+		height: 60px;
+	}
 }
